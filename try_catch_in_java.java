@@ -1,5 +1,3 @@
-#Please suggest more catch blocks wherever required
-#some times its getting exceptions,run time errors, sugges try catch blocks wherever required
 import java.util.Scanner;
 class exception 
 {
@@ -10,7 +8,14 @@ class exception
     System.out.println("Input two integers");
     a = input.nextInt( );
     b = input.nextInt( );
-    result = a / b;
-    System.out.println("Result = " + result);
+    try 
+    {
+      result = a / b;
+      System.out.println("Result = " + result);
+    }
+    catch (ArithmeticException e) 
+    {
+      System.out.println("Exception caught: Division by zero.");
+     }
   }
 }
